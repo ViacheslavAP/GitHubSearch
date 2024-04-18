@@ -173,7 +173,7 @@ fun HomeScreen(navHostController: NavHostController) {
 @Composable
 fun RepositoryList(
     pagingData: LazyPagingItems<RepositoryItem>,
-    navController: NavHostController
+    navController: NavHostController,
 ) {
     LazyColumn {
         items(pagingData.itemCount) { index ->
@@ -278,21 +278,5 @@ fun RepositoryItem(repository: RepositoryItem, navController: NavHostController)
 @Preview(showBackground = true)
 @Composable
 fun Show() {
-    val dummyRepository = RepositoryItem(
-        id = 1235122325,
-        name = "Sample Repository",
-        owner = Owner("Dummy Owner"),
-        html_url = "https://github.com/sample_owner/sample_repository",
-        fullName = "This is a sample repository for demonstration purposes.",
-        description = "gpdjpd",
-        language = "RUS",
-        stargazersCount = 14,
-        watchersCount = 10,
-        forksCount = 2,
-        topics = listOf("Android", "Compose", "GitHub"),
-        createdAt = "2022-04-18",
-        updatedAt = "2024-04-18"
-    )
-    val dummyNavController = rememberNavController()
-    RepositoryItem(repository = dummyRepository, navController = dummyNavController)
+
 }

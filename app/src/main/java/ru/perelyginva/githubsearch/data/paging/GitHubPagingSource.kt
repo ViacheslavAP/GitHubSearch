@@ -19,7 +19,6 @@ class GitHubPagingSource (
             val response = githubApiService.searchRepositories(query, page, params.loadSize)
             val item = response.items
 
-
             appDatabase.repositoryDao().deleteAllRepositories()
 
             val limitedItems = response.items.take(15)
