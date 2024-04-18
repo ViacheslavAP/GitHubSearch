@@ -68,7 +68,7 @@ fun RepositoryDetailsScreen(repositoryItem: RepositoryItem, navHostController: N
         )
 
         Text(
-            text = repositoryItem. ?: "",
+            text = repositoryItem.description ?: "",
             style = MaterialTheme.typography.body1,
             color = Color.Black,
             fontSize = 16.sp,
