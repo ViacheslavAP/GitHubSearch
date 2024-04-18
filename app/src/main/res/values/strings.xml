@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GitHubSearch</string>
+    <string name="search_repositories">Поиск репозитория</string>
+    <string name="repository">Repository : %1$s</string>
+    <string name="owner">Owner : %1$s</string>
+    <string name="about_owner">Perelygin_V.A</string>
+    <string name="about_version">version_0.1</string>
+    <string name="updatedAt">updatedAt : %1$s</string>
+    <string name="stars">stars : %1$s</string>
+</resources>
