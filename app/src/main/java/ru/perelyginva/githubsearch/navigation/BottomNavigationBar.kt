@@ -1,5 +1,6 @@
 package ru.perelyginva.githubsearch.navigation
 
+import androidx.compose.foundation.background
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.Icon
@@ -8,14 +9,22 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset.Companion.Unspecified
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
 import androidx.navigation.NavHostController
+import ru.perelyginva.githubsearch.R
 
 @Composable
 fun BottomNavigationBar(navController: NavHostController) {
 
     val currentRoute = navController.currentDestination?.route
 
-    BottomNavigation {
+    BottomNavigation(modifier = Modifier,
+        backgroundColor = colorResource(id = R.color.grey),
+        contentColor = Color.Black
+    ) {
 
         BottomNavigationItem(
             icon = { Icon(Icons.Default.Home, contentDescription = "Home") },
