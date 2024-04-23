@@ -30,13 +30,15 @@ fun NavGraph(
             AboutScreen(navHostController)
         }
 
-        composable(route = "${MainDestinations.REPOSITORY_DETAILS_ROUTE}/{jsonString}") { backStackEntry ->
+        composable(route = "${MainDestinations.REPOSITORY_DETAILS_ROUTE}/{jsonString}") {
+            backStackEntry ->
             val jsonString: String? = backStackEntry.arguments?.getString("jsonString")
             val user: RepositoryItem? = Gson().fromJson(jsonString, RepositoryItem::class.java)
             user?.let { it1 -> RepositoryDetailsScreen(it1, navHostController) }
         }
 
-        composable(route = "${MainDestinations.WEB_VIEW_ROUTE}/{url}") { backStackEntry ->
+        composable(route = "${MainDestinations.WEB_VIEW_ROUTE}/{url}") {
+            backStackEntry ->
             val url: String? = backStackEntry.arguments?.getString("url")
             ComposeWebView(url.toString())
         }
